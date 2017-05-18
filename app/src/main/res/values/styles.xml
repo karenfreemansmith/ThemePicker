@@ -1,18 +1,138 @@
 <resources>
 
     <!-- Base application theme. -->
-    <style name="AppTheme1" parent="Theme.AppCompat.Light.DarkActionBar">
+    <style name="RedTheme" parent="Theme.AppCompat.Light.DarkActionBar">
         <!-- Customize your theme here. -->
-        <item name="colorPrimary">@color/colorPrimary</item>
-        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
-        <item name="colorAccent">@color/colorAccent</item>
+        <item name="colorPrimary">#F44336</item>
+        <item name="colorPrimaryDark">#D32F2F</item>
+        <item name="colorAccent">#FFCDD2</item>
     </style>
 
-    <style name="AppTheme2" parent="Theme.AppCompat.Light.DarkActionBar">
+    <style name="IndigoTheme" parent="Theme.AppCompat.Light.DarkActionBar">
         <!-- Customize your theme here. -->
-        <item name="colorPrimary">@color/colorAccent</item>
-        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
-        <item name="colorAccent">@color/colorPrimary</item>
+        <item name="colorPrimary">#3F51B5</item>
+        <item name="colorPrimaryDark">#303F9F</item>
+        <item name="colorAccent">#C5CAE9</item>
     </style>
+
+    <style name="GreenTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">#4CAF50</item>
+        <item name="colorPrimaryDark">#388E3C</item>
+        <item name="colorAccent">#C8E6C9</item>
+    </style>
+
+    <style name="OrangeTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">#FF9800</item>
+        <item name="colorPrimaryDark">#F57C00</item>
+        <item name="colorAccent">#FFE0B2</item>
+    </style>
+
+    <style name="PinkTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">#E91E63</item>
+        <item name="colorPrimaryDark">#C2185B</item>
+        <item name="colorAccent">#F8BBD0</item>
+    </style>
+
+    <style name="BlueTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">#2196F3</item>
+        <item name="colorPrimaryDark">#1976D2</item>
+        <item name="colorAccent">#BBDEFB</item>
+    </style>
+
+    <style name="LightGreenTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">#8BC34A</item>
+        <item name="colorPrimaryDark">#689F38</item>
+        <item name="colorAccent">#DCEDC8</item>
+    </style>
+
+    <style name="DeepOrangeTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">#FF5722</item>
+        <item name="colorPrimaryDark">#E64A19</item>
+        <item name="colorAccent">#FFCCBC</item>
+    </style>
+
+    <style name="LightBlueTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">#03A9F4</item>
+        <item name="colorPrimaryDark">#0288D1</item>
+        <item name="colorAccent">#B3E5FC</item>
+    </style>
+
+    <style name="LimeTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">#CDDC39</item>
+        <item name="colorPrimaryDark">#AFB42B</item>
+        <item name="colorAccent">#F0F4C3</item>
+    </style>
+
+    <style name="BrownTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">#795548</item>
+        <item name="colorPrimaryDark">#5D4037</item>
+        <item name="colorAccent">#D7CCC8</item>
+    </style>
+
+    <style name="PurpleTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">#9C27B0</item>
+        <item name="colorPrimaryDark">#7B1FA2</item>
+        <item name="colorAccent">#E1BEE7</item>
+    </style>
+
+    <style name="CyanTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">#00BCD4</item>
+        <item name="colorPrimaryDark">#0097A7</item>
+        <item name="colorAccent">#B2EBF2</item>
+    </style>
+
+    <style name="YellowTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">#FFEB3B</item>
+        <item name="colorPrimaryDark">#FBC02D</item>
+        <item name="colorAccent">#FFF9C4</item>
+    </style>
+
+    <style name="GreyTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">#9E9E9E</item>
+        <item name="colorPrimaryDark">#616161</item>
+        <item name="colorAccent">#F5F5F5</item>
+    </style>
+
+    <style name="DeepPurpleTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">#673AB7</item>
+        <item name="colorPrimaryDark">#512DA8</item>
+        <item name="colorAccent">#D1C4E9</item>
+    </style>
+
+    <style name="TealTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">#009688</item>
+        <item name="colorPrimaryDark">#00796B</item>
+        <item name="colorAccent">#B2DFDB</item>
+    </style>
+
+    <style name="AmberTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">#FFC107</item>
+        <item name="colorPrimaryDark">#FFA000</item>
+        <item name="colorAccent">#FFECB3</item>
+    </style>
+
+    <style name="BlueGreyTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">#607D8B</item>
+        <item name="colorPrimaryDark">#455A64</item>
+        <item name="colorAccent">#CFD8DC</item>
+    </style>
+
 
 </resources>
