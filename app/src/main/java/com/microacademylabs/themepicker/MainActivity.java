@@ -2,6 +2,7 @@ package com.microacademylabs.themepicker;
 
 import android.content.Intent;
 import android.content.res.Resources;
+import android.support.constraint.ConstraintLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -12,25 +13,25 @@ import java.util.Random;
 public class MainActivity extends AppCompatActivity {
   private Button btn;
   private int myTheme;
+  private Random rand = new Random();
+  int randTheme = rand.nextInt(18);
 
   @Override
   protected void onCreate(Bundle savedInstanceState) {
     super.onCreate(savedInstanceState);
     setContentView(R.layout.activity_main);
 
-
     btn = (Button) findViewById(R.id.changeButton);
     btn.setOnClickListener(new View.OnClickListener() {
       @Override
       public void onClick(View v) {
+        int randTheme = rand.nextInt(18);
         MainActivity.this.recreate();
       }
     });
   }
   @Override
   public Resources.Theme getTheme() {
-    Random rand = new Random();
-    int randTheme = rand.nextInt(18);
     Resources.Theme theme = super.getTheme();
     switch(randTheme) {
       case 0:
