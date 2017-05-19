@@ -10,12 +10,10 @@
 
     <LinearLayout
         android:id="@+id/textBlock"
-        android:layout_width="368dp"
-        android:layout_height="431dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
         android:orientation="vertical"
-        app:layout_constraintBottom_toTopOf="@+id/changeButton"
-        tools:layout_editor_absoluteX="8dp"
-        >
+        android:padding="8dp">
 
         <TextView
             android:id="@+id/greetingText"
@@ -49,17 +47,16 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="TextView"/>
-    </LinearLayout>
 
-    <Button
-        android:id="@+id/changeButton"
-        android:layout_width="368dp"
-        android:layout_height="0dp"
-        android:elevation="1dp"
-        android:text="Change Color"
-        android:textAlignment="center"
-        android:textSize="24sp"
-        tools:layout_editor_absoluteX="8dp"
-        tools:layout_editor_absoluteY="447dp"/>
+        <Button
+            android:id="@+id/changeButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Change Color"
+            android:textAlignment="center"
+            android:textSize="24sp"
+            tools:layout_editor_absoluteX="8dp"
+            tools:layout_editor_absoluteY="447dp"/>
+    </LinearLayout>
 
 </android.support.constraint.ConstraintLayout>
