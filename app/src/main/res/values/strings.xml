@@ -1,25 +1,3 @@
 <resources>
     <string name="app_name">Theme Picker</string>
-    <string-array name="theme_array">
-        <item>LimeTheme</item>
-        <item>DeepOrangeTheme</item>
-        <item>YellowTheme</item>
-        <item>AmberTheme</item>
-        <item>BrownTheme</item>
-        <item>GreyTheme</item>
-        <item>BlueGreyTheme</item>
-        <item>LightBlueTheme</item>
-        <item>BlueTheme</item>
-        <item>OrangeTheme</item>
-        <item>IndigoTheme</item>
-        <item>PurpleTheme</item>
-        <item>DeepPurpleTheme</item>
-        <item>RedTheme</item>
-        <item>PinkTheme</item>
-        <item>CyanTheme</item>
-        <item>TealTheme</item>
-        <item>GreenTheme</item>
-        <item>LightGreenTheme</item>
-    </string-array>
-
 </resources>
