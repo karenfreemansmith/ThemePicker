@@ -2,6 +2,8 @@ package com.microacademylabs.themepicker;
 
 import android.content.Intent;
 import android.content.res.Resources;
+import android.graphics.Color;
+import android.support.design.widget.FloatingActionButton;
 import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -15,11 +17,12 @@ import java.util.Random;
 public class MainActivity extends AppCompatActivity {
   private Button btnNext;
   private Button btnPrev;
+  private FloatingActionButton fabAccent;
   private TextView tvTitle;
   private TextView tvDark;
   private TextView tvLight;
   private TextView tvPrimary;
-  private RelativeLayout mRelativeLayout;
+
   private Random rand = new Random();
   int thisTheme;
 
@@ -34,7 +37,7 @@ public class MainActivity extends AppCompatActivity {
     tvPrimary = (TextView) findViewById(R.id.primaryText);
     tvDark = (TextView) findViewById(R.id.darkText);
     tvLight = (TextView) findViewById(R.id.lightText);
-    mRelativeLayout = (RelativeLayout) findViewById(R.id.mainLayout);
+    fabAccent = (FloatingActionButton) findViewById(R.id.fabAccent);
 
     btnNext = (Button) findViewById(R.id.nextButton);
     btnNext.setOnClickListener(new View.OnClickListener() {
@@ -72,199 +75,78 @@ public class MainActivity extends AppCompatActivity {
   private void setColors() {
     switch(thisTheme) {
       case 0:
-        tvTitle.setText("Grey Theme");
-        tvTitle.setTextColor(ContextCompat.getColor(MainActivity.this, R.color.colorPrimaryDarkGrey));
-        tvDark.setText("Dark: #616161");
-        tvPrimary.setText("Primary: #9E9E9E");
-        tvLight.setText("Light: #F5F5F5");
-        mRelativeLayout.setBackgroundColor(ContextCompat.getColor(MainActivity.this, R.color.colorAccentGrey));
-        btnNext.setBackgroundColor(ContextCompat.getColor(MainActivity.this, R.color.colorPrimaryPink));
-        btnPrev.setBackgroundColor(ContextCompat.getColor(MainActivity.this, R.color.colorPrimaryRed));
+        newColors("#F5F5F5", "#616161", "#9E9E9E", "#9E9E9E", "Pink Theme");
         break;
       case 1:
-        tvTitle.setText("Pink Theme");
-        tvTitle.setTextColor(ContextCompat.getColor(MainActivity.this, R.color.colorPrimaryDarkPink));
-        tvDark.setText("Dark: #C2185B");
-        tvPrimary.setText("Primary: #E91E63");
-        tvLight.setText("Light: #F8BBD0");
-        mRelativeLayout.setBackgroundColor(ContextCompat.getColor(MainActivity.this, R.color.colorAccentPink));
-        btnNext.setBackgroundColor(ContextCompat.getColor(MainActivity.this, R.color.colorPrimaryCyan));
-        btnPrev.setBackgroundColor(ContextCompat.getColor(MainActivity.this, R.color.colorPrimaryGrey));
+        newColors("#F8BBD0", "#C2185B", "#E91E63", "#E91E63", "Pink Theme");
         break;
       case 2:
-        tvTitle.setText("Cyan Theme");
-        tvTitle.setTextColor(ContextCompat.getColor(MainActivity.this, R.color.colorPrimaryDarkCyan));
-        tvDark.setText("Dark: #0097A7");
-        tvPrimary.setText("Primary: #00BCD4");
-        tvLight.setText("Light: #B2EBF2");
-        mRelativeLayout.setBackgroundColor(ContextCompat.getColor(MainActivity.this, R.color.colorAccentCyan));
-        btnNext.setBackgroundColor(ContextCompat.getColor(MainActivity.this, R.color.colorPrimaryAmber));
-        btnPrev.setBackgroundColor(ContextCompat.getColor(MainActivity.this, R.color.colorPrimaryPink));
+        newColors("#B2EBF2", "#0097A7", "#00BCD4", "#00BCD4", "Cyan Theme");
         break;
       case 3:
-        tvTitle.setText("Amber Theme");
-        tvTitle.setTextColor(ContextCompat.getColor(MainActivity.this, R.color.colorPrimaryDarkAmber));
-        tvDark.setText("Dark: #FFA00");
-        tvPrimary.setText("Primary: #FFC107");
-        tvLight.setText("Light: #FFECB3");
-        mRelativeLayout.setBackgroundColor(ContextCompat.getColor(MainActivity.this, R.color.colorAccentAmber));
-        btnNext.setBackgroundColor(ContextCompat.getColor(MainActivity.this, R.color.colorPrimaryGreen));
-        btnPrev.setBackgroundColor(ContextCompat.getColor(MainActivity.this, R.color.colorPrimaryCyan));
+        newColors("#FFECB3", "#FFA000", "#FFC107", "#FFC107", "Amber Theme");
         break;
       case 4:
-        tvTitle.setText("Green Theme");
-        tvTitle.setTextColor(ContextCompat.getColor(MainActivity.this, R.color.colorPrimaryDarkGreen));
-        tvDark.setText("Dark: #388E3C");
-        tvPrimary.setText("Primary: #4CAF50");
-        tvLight.setText("Light: #C8E6C9");
-        mRelativeLayout.setBackgroundColor(ContextCompat.getColor(MainActivity.this, R.color.colorAccentGreen));
-        btnNext.setBackgroundColor(ContextCompat.getColor(MainActivity.this, R.color.colorPrimaryBrown));
-        btnPrev.setBackgroundColor(ContextCompat.getColor(MainActivity.this, R.color.colorPrimaryAmber));
+        newColors("#C8E6C9", "#388E3C", "#4CAF50", "#4CAF50", "Green Theme");
         break;
       case 5:
-        tvTitle.setText("Brown Theme");
-        tvTitle.setTextColor(ContextCompat.getColor(MainActivity.this, R.color.colorPrimaryDarkBrown));
-        tvDark.setText("Dark: #5D4037");
-        tvPrimary.setText("Primary: #795548");
-        tvLight.setText("Light: #D7CCC8");
-        mRelativeLayout.setBackgroundColor(ContextCompat.getColor(MainActivity.this, R.color.colorAccentBrown));
-        btnNext.setBackgroundColor(ContextCompat.getColor(MainActivity.this, R.color.colorPrimaryLime));
-        btnPrev.setBackgroundColor(ContextCompat.getColor(MainActivity.this, R.color.colorPrimaryGreen));
+        newColors("#D7CCC8", "#5D4037", "#795548", "#795548", "Brown Theme");
         break;
       case 6:
-        tvTitle.setText("Lime Theme");
-        tvTitle.setTextColor(ContextCompat.getColor(MainActivity.this, R.color.colorPrimaryDarkLime));
-        tvDark.setText("Dark: #AFB42B");
-        tvPrimary.setText("Primary: #CDDC39");
-        tvLight.setText("Light: #F0F4C3");
-        mRelativeLayout.setBackgroundColor(ContextCompat.getColor(MainActivity.this, R.color.colorAccentLime));
-        btnNext.setBackgroundColor(ContextCompat.getColor(MainActivity.this, R.color.colorPrimaryPurple));
-        btnPrev.setBackgroundColor(ContextCompat.getColor(MainActivity.this, R.color.colorPrimaryBrown));
+        newColors("#F0F4C3", "#AFB42B", "#CDDC39", "#CDDC39", "Lime Theme");
         break;
       case 7:
-        tvTitle.setText("Purple Theme");
-        tvTitle.setTextColor(ContextCompat.getColor(MainActivity.this, R.color.colorPrimaryDarkPurple));
-        tvDark.setText("Dark: #7B1FA2");
-        tvPrimary.setText("Primary: #9C27B0");
-        tvLight.setText("Light: #E1BEE7");
-        mRelativeLayout.setBackgroundColor(ContextCompat.getColor(MainActivity.this, R.color.colorAccentPurple));
-        btnNext.setBackgroundColor(ContextCompat.getColor(MainActivity.this, R.color.colorPrimaryLightBlue));
-        btnPrev.setBackgroundColor(ContextCompat.getColor(MainActivity.this, R.color.colorPrimaryLime));
+        newColors("#E1BEE7", "#7B1FA2", "#9C27B0", "#9C27B0", "Purple Theme");
         break;
       case 8:
-        tvTitle.setText("Light Blue Theme");
-        tvTitle.setTextColor(ContextCompat.getColor(MainActivity.this, R.color.colorPrimaryDarkLightBlue));
-        tvDark.setText("Dark: #0288D1");
-        tvPrimary.setText("Primary: #03A9F4");
-        tvLight.setText("Light: #B3E5FC");
-        mRelativeLayout.setBackgroundColor(ContextCompat.getColor(MainActivity.this, R.color.colorAccentLightBlue));
-        btnNext.setBackgroundColor(ContextCompat.getColor(MainActivity.this, R.color.colorPrimaryYellow));
-        btnPrev.setBackgroundColor(ContextCompat.getColor(MainActivity.this, R.color.colorPrimaryPurple));
+        newColors("#B3E5FC", "#0288D1", "#03A9F4", "#03A9F4", "Light Blue Theme");
         break;
       case 9:
-        tvTitle.setText("Yellow Theme");
-        tvTitle.setTextColor(ContextCompat.getColor(MainActivity.this, R.color.colorPrimaryDarkYellow));
-        tvDark.setText("Dark: #FBC02D");
-        tvPrimary.setText("Primary: #FFEB3B");
-        tvLight.setText("Light: #FFF9C4");
-        mRelativeLayout.setBackgroundColor(ContextCompat.getColor(MainActivity.this, R.color.colorAccentYellow));
-        btnNext.setBackgroundColor(ContextCompat.getColor(MainActivity.this, R.color.colorPrimaryIndigo));
-        btnPrev.setBackgroundColor(ContextCompat.getColor(MainActivity.this, R.color.colorPrimaryLightBlue));
+        newColors("#FFF9C4", "#FBC02D", "#FFEB3B", "#FFEB3B", "Yellow Theme");
         break;
       case 10:
-        tvTitle.setText("Indigo Theme");
-        tvTitle.setTextColor(ContextCompat.getColor(MainActivity.this, R.color.colorPrimaryDarkIndigo));
-        tvDark.setText("Dark: #303F9F");
-        tvPrimary.setText("Primary: #3F51B5");
-        tvLight.setText("Light: #C5CAE9");
-        mRelativeLayout.setBackgroundColor(ContextCompat.getColor(MainActivity.this, R.color.colorAccentIndigo));
-        btnNext.setBackgroundColor(ContextCompat.getColor(MainActivity.this, R.color.colorPrimaryDeepOrange));
-        btnPrev.setBackgroundColor(ContextCompat.getColor(MainActivity.this, R.color.colorPrimaryYellow));
+        newColors("#C5CAE9", "#303F9F", "#3F51B5", "#3F51B5", "Indigo Theme");
         break;
       case 11:
-        tvTitle.setText("Deep Orange Theme");
-        tvTitle.setTextColor(ContextCompat.getColor(MainActivity.this, R.color.colorPrimaryDarkDeepOrange));
-        tvDark.setText("Dark: #E64A19");
-        tvPrimary.setText("Primary: #FF5722");
-        tvLight.setText("Light: #FFCCBC");
-        mRelativeLayout.setBackgroundColor(ContextCompat.getColor(MainActivity.this, R.color.colorAccentDeepOrange));
-        btnNext.setBackgroundColor(ContextCompat.getColor(MainActivity.this, R.color.colorPrimaryBlue));
-        btnPrev.setBackgroundColor(ContextCompat.getColor(MainActivity.this, R.color.colorPrimaryIndigo));
+        newColors("#FFCCBC", "#E64A19", "#FF5722", "#FF5722", "Deep Orange Theme");
         break;
       case 12:
-        tvTitle.setText("Blue Theme");
-        tvTitle.setTextColor(ContextCompat.getColor(MainActivity.this, R.color.colorPrimaryDarkBlue));
-        tvDark.setText("Dark: #2196F3");
-        tvPrimary.setText("Primary: #1976D2");
-        tvLight.setText("Light: #BBDEFB");
-        mRelativeLayout.setBackgroundColor(ContextCompat.getColor(MainActivity.this, R.color.colorAccentBlue));
-        btnNext.setBackgroundColor(ContextCompat.getColor(MainActivity.this, R.color.colorPrimaryLightGreen));
-        btnPrev.setBackgroundColor(ContextCompat.getColor(MainActivity.this, R.color.colorPrimaryDeepOrange));
+        newColors("#BBDEFB", "#2196F3", "#1976D2", "#1976D2", "Blue Theme");
         break;
       case 13:
-        tvTitle.setText("Light Green Theme");
-        tvTitle.setTextColor(ContextCompat.getColor(MainActivity.this, R.color.colorPrimaryDarkLightGreen));
-        tvDark.setText("Dark: #689F38");
-        tvPrimary.setText("Primary: #8BC34A");
-        tvLight.setText("Light: #DCEDC8");
-        mRelativeLayout.setBackgroundColor(ContextCompat.getColor(MainActivity.this, R.color.colorAccentLightGreen));
-        btnNext.setBackgroundColor(ContextCompat.getColor(MainActivity.this, R.color.colorPrimaryDeepPurple));
-        btnPrev.setBackgroundColor(ContextCompat.getColor(MainActivity.this, R.color.colorPrimaryBlue));
+        newColors("#DCEDC8", "#689F38", "#8BC34A", "#8BC34A", "Light Green Theme");
         break;
       case 14:
-        tvTitle.setText("Deep Purple Theme");
-        tvTitle.setTextColor(ContextCompat.getColor(MainActivity.this, R.color.colorPrimaryDarkDeepPurple));
-        tvDark.setText("Dark: #512DA8");
-        tvPrimary.setText("Primary: #673AB7");
-        tvLight.setText("Light: #D1C4E9");
-        mRelativeLayout.setBackgroundColor(ContextCompat.getColor(MainActivity.this, R.color.colorAccentDeepPurple));
-        btnNext.setBackgroundColor(ContextCompat.getColor(MainActivity.this, R.color.colorPrimaryOrange));
-        btnPrev.setBackgroundColor(ContextCompat.getColor(MainActivity.this, R.color.colorPrimaryLightGreen));
+        newColors("#D1C4E9", "#512DA8", "#673AB7", "#673AB7", "Deep Purple Theme");
         break;
       case 15:
-        tvTitle.setText("Orange Theme");
-        tvTitle.setTextColor(ContextCompat.getColor(MainActivity.this, R.color.colorPrimaryDarkOrange));
-        tvDark.setText("Dark: #F57C00");
-        tvPrimary.setText("Primary: #FF9800");
-        tvLight.setText("Light: #FFE0B2");
-        mRelativeLayout.setBackgroundColor(ContextCompat.getColor(MainActivity.this, R.color.colorAccentOrange));
-        btnNext.setBackgroundColor(ContextCompat.getColor(MainActivity.this, R.color.colorPrimaryTeal));
-        btnPrev.setBackgroundColor(ContextCompat.getColor(MainActivity.this, R.color.colorPrimaryDeepPurple));
+        newColors("#FFE0B2", "#F57C00", "#FF9800", "#FF9800", "Orange Theme");
         break;
       case 16:
-        tvTitle.setText("Teal Theme");
-        tvTitle.setTextColor(ContextCompat.getColor(MainActivity.this, R.color.colorPrimaryDarkTeal));
-        tvDark.setText("Dark: #00796B");
-        tvPrimary.setText("Primary: #009688");
-        tvLight.setText("Light: #B2DFDB");
-        mRelativeLayout.setBackgroundColor(ContextCompat.getColor(MainActivity.this, R.color.colorAccentTeal));
-        btnNext.setBackgroundColor(ContextCompat.getColor(MainActivity.this, R.color.colorPrimaryBlueGrey));
-        btnPrev.setBackgroundColor(ContextCompat.getColor(MainActivity.this, R.color.colorPrimaryOrange));
+        newColors("#B2DFDB", "#00796B", "#009688", "#009688", "Teal Theme");
         break;
       case 17:
-        tvTitle.setText("Blue Grey Theme");
-        tvTitle.setTextColor(ContextCompat.getColor(MainActivity.this, R.color.colorPrimaryDarkBlueGrey));
-        tvDark.setText("Dark: #455A64");
-        tvPrimary.setText("Primary: #607D8B");
-        tvLight.setText("Light: #CFD8DC");
-        mRelativeLayout.setBackgroundColor(ContextCompat.getColor(MainActivity.this, R.color.colorAccentBlueGrey));
-        btnNext.setBackgroundColor(ContextCompat.getColor(MainActivity.this, R.color.colorPrimaryRed));
-        btnPrev.setBackgroundColor(ContextCompat.getColor(MainActivity.this, R.color.colorPrimaryTeal));
+        newColors("#CFD8DC", "#455A64", "#607D8B", "#607D8B", "Blue Grey Theme");
         break;
       case 18:
-        tvTitle.setText("Red Theme");
-        tvTitle.setTextColor(ContextCompat.getColor(MainActivity.this, R.color.colorPrimaryDarkRed));
-        tvDark.setText("Dark: #D32F2F");
-        tvPrimary.setText("Primary: ");
-        tvLight.setText("Light: #FFCDD2");
-        mRelativeLayout.setBackgroundColor(ContextCompat.getColor(MainActivity.this, R.color.colorAccentRed));
-        btnNext.setBackgroundColor(ContextCompat.getColor(MainActivity.this, R.color.colorPrimaryGrey));
-        btnPrev.setBackgroundColor(ContextCompat.getColor(MainActivity.this, R.color.colorPrimaryBlueGrey));
+        newColors("#FFCDD2", "#D32F2F", "#F44336", "#F44336", "Red Theme");
         break;
-
       default:
         break;
     }
+  }
+
+  private void newColors(String light, String dark, String primary, String accent, String themeName) {
+    tvTitle.setText(themeName);
+    super.getTheme().applyStyle(R.style.GreyTheme, true);
+    tvDark.setText("Dark: " + dark);
+    tvTitle.setTextColor(Color.parseColor(dark));
+    tvPrimary.setText("Primary: " + primary);
+    tvLight.setText("Light: " + light);
+    tvTitle.setBackgroundColor(Color.parseColor(light));
+    fabAccent.setBackgroundColor(Color.parseColor(accent));
+    btnNext.setBackgroundColor(Color.parseColor(accent));
+    btnPrev.setBackgroundColor(Color.parseColor(accent));
   }
 
   @Override
@@ -333,6 +215,4 @@ public class MainActivity extends AppCompatActivity {
     }
     return theme;
   }
-
-
 }
