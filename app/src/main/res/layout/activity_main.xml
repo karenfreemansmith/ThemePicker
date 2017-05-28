@@ -1,99 +1,185 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
+<android.support.constraint.ConstraintLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/mainLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.microacademylabs.themepicker.MainActivity">
+    tools:context="com.microacademylabs.themepicker.MainActivity"
+    tools:layout_editor_absoluteY="81dp"
+    tools:layout_editor_absoluteX="0dp">
 
     <TextView
         android:id="@+id/greetingText"
-        android:layout_width="match_parent"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
-        android:paddingBottom="24dp"
+        android:paddingBottom="36dp"
         android:paddingTop="24dp"
-        android:text="Hello World!"
+        android:text="Theme Picker"
         android:textAlignment="center"
         android:textColor="#212121"
-        android:textSize="30sp"/>
+        android:textSize="30sp"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
 
     <android.support.design.widget.FloatingActionButton
         android:id="@+id/fabAccent"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignBottom="@+id/primaryText"
-        android:layout_alignRight="@+id/greetingText"
-        android:layout_marginBottom="25dp"
-        android:layout_marginEnd="31dp"
-        android:layout_marginRight="31dp"
+        android:layout_above="@+id/darkText"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
         android:clickable="true"
+        app:backgroundTint="@color/colorAccentAmber"
         app:fabSize="normal"
-        app:srcCompat="@android:drawable/ic_menu_view"/>
+        app:layout_constraintBottom_toBottomOf="@+id/darkText"
+        app:layout_constraintHorizontal_bias="0.1"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/greetingText"
+        app:layout_constraintVertical_bias="0.35000002"
+        app:srcCompat="@android:drawable/ic_dialog_info"/>
 
     <TextView
         android:id="@+id/primaryText"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/greetingText"
-        android:layout_margin="16dp"
-        android:text="TextView"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginTop="8dp"
+        android:padding="16dp"
+        android:text="Primary: "
+        android:textAlignment="textEnd"
+        android:gravity="end"
         android:textColor="#212121"
-        android:textSize="24sp"/>
+        android:textSize="24sp"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/greetingText"/>
 
     <TextView
         android:id="@+id/darkText"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/primaryText"
-        android:layout_margin="16dp"
-        android:text="TextView"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginTop="8dp"
+        android:padding="16dp"
+        android:text="Dark: "
+        android:textAlignment="textEnd"
+        android:gravity="end"
         android:textColor="#212121"
-        android:textSize="24sp"/>
+        android:textSize="24sp"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/primaryText"/>
 
     <TextView
         android:id="@+id/lightText"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/accentText"
+        android:background="#333333"
+        android:paddingBottom="4dp"
+        android:paddingLeft="36dp"
+        android:paddingRight="16dp"
+        android:paddingTop="4dp"
+        android:text="Light: "
+        android:textAlignment="textEnd"
+        android:gravity="end"
+        android:textColor="#dddddd"
+        android:textSize="24sp"
+        app:layout_constraintLeft_toLeftOf="@+id/primaryText"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/accentText"
+        android:layout_marginTop="8dp"
+        app:layout_constraintHorizontal_bias="0.529"/>
+
+    <TextView
+        android:id="@+id/accentText"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/darkText"
-        android:layout_margin="16dp"
-        android:text="TextView"
-        android:textColor="#212121"
-        android:textSize="24sp"/>
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginTop="8dp"
+        android:padding="16dp"
+        android:text="Accent: "
+        android:textAlignment="textEnd"
+        android:gravity="end"
+        android:textColor="#cccccc"
+        android:textSize="24sp"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/darkText"/>
 
-    <LinearLayout
-        android:layout_width="match_parent"
+
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
-        android:orientation="horizontal">
+        android:orientation="horizontal"
+        android:id="@+id/linearLayout"
+        tools:layout_editor_absoluteY="0dp"
+        tools:layout_editor_absoluteX="8dp">
 
-        <Button
-            android:id="@+id/prevbutton"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_margin="8dp"
-            android:layout_weight="1"
-            android:padding="8dp"
-            android:text="Prev"
-            android:textColor="@android:color/background_light"
-            android:textSize="24sp"/>
+    <Button
+        android:id="@+id/prevbutton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:layout_marginLeft="24dp"
+        android:layout_weight="1"
+        android:padding="8dp"
+        android:text="Prev"
+        android:textColor="@android:color/background_light"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginStart="24dp"/>
 
-        <Button
-            android:id="@+id/nextButton"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_alignParentBottom="false"
-            android:layout_alignParentLeft="false"
-            android:layout_alignParentStart="false"
-            android:layout_margin="8dp"
-            android:layout_weight="1"
-            android:padding="8dp"
-            android:text="Next"
-            android:textAlignment="center"
-            android:textColor="@android:color/background_light"
-            android:textSize="24sp"/>
-    </LinearLayout>
+    <Button
+        android:id="@+id/nextButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="false"
+        android:layout_alignParentLeft="false"
+        android:layout_alignParentStart="false"
+        android:layout_marginBottom="8dp"
+        android:layout_marginRight="24dp"
+        android:layout_weight="1"
+        android:padding="8dp"
+        android:text="Next"
+        android:textAlignment="center"
+        android:textColor="@android:color/background_light"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginEnd="24dp"/>
 
-</RelativeLayout>
+
+    <com.google.android.gms.ads.AdView
+        android:id="@+id/adView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginRight="8dp"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginLeft="8dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintBottom_toTopOf="@+id/prevbutton"
+        android:layout_marginTop="8dp"
+        app:layout_constraintTop_toBottomOf="@+id/lightText"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"/>
+
+</android.support.constraint.ConstraintLayout>

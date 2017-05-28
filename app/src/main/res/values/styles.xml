@@ -54,7 +54,7 @@
         <!-- Customize your theme here. -->
         <item name="colorPrimary">@color/colorPrimaryDeepOrange</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDarkDeepOrange</item>
-        <item name="colorAccent">@color/colorAccentOrange</item>
+        <item name="colorAccent">@color/colorAccentDeepOrange</item>
     </style>
 
     <style name="LightBlueTheme" parent="Theme.AppCompat.Light.DarkActionBar">
@@ -110,7 +110,7 @@
         <!-- Customize your theme here. -->
         <item name="colorPrimary">@color/colorPrimaryDeepPurple</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDarkDeepPurple</item>
-        <item name="colorAccent">@color/colorAccentPurple</item>
+        <item name="colorAccent">@color/colorAccentDeepPurple</item>
     </style>
 
     <style name="TealTheme" parent="Theme.AppCompat.Light.DarkActionBar">
