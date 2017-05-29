@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">Theme Picker</string>
+    <string name="banner_add_test_id">ca-app-pub-3940256099942544/6300978111</string>
+    <string name="interstitial_add_test_id">ca-app-pub-3940256099942544/1033173712</string>
+    <string name="lg_native_add_test_id">ca-app-pub-3940256099942544/2177258514</string>
+    <string name="sm_native_add_test_id">ca-app-pub-3940256099942544/2793859312</string>
+
 </resources>

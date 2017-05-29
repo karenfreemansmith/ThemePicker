@@ -4,20 +4,16 @@ import android.content.Intent;
 import android.content.res.ColorStateList;
 import android.content.res.Resources;
 import android.graphics.Color;
-import android.graphics.drawable.ColorDrawable;
-import android.support.design.widget.AppBarLayout;
 import android.support.design.widget.FloatingActionButton;
-import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.support.v7.app.WindowDecorActionBar;
-import android.util.Log;
 import android.view.View;
 import android.widget.Button;
-import android.widget.RelativeLayout;
 import android.widget.TextView;
 
-import java.util.Random;
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.AdView;
+import com.google.android.gms.ads.NativeExpressAdView;
 
 public class MainActivity extends AppCompatActivity {
   private Button btnNext;
@@ -28,6 +24,8 @@ public class MainActivity extends AppCompatActivity {
   private TextView tvLight;
   private TextView tvPrimary;
   private TextView tvAccent;
+  private NativeExpressAdView adView;
+
   private int mAccent;
 
   int thisTheme;
@@ -39,6 +37,12 @@ public class MainActivity extends AppCompatActivity {
 
     super.onCreate(savedInstanceState);
     setContentView(R.layout.activity_main);
+
+    adView = (NativeExpressAdView)findViewById(R.id.adView);
+    AdRequest adRequest = new AdRequest.Builder()
+        .addTestDevice("4DB43BD2EAAC29E367B2A21010D4E889")
+        .build();
+    adView.loadAd(adRequest);
 
     mAccent = thisTheme;
 
